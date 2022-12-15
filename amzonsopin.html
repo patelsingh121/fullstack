@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>amazon</title>
+        <style>
+            section{
+                height: 300px;
+            }
+            header,footer{
+                background-color: blueviolet;
+                color: white;
+                padding:10px;
+                text-align: center;
+                font-family: arial;
+            }
+            .container{
+                display: grid;
+                grid-template-columns: 3fr 6fr 3fr;
+            }
+            header{
+                grid-column:1/4;
+                grid-row: 3;
+            }
+            footer{
+                grid-row:1;
+                grid-column: 1/4;
+            }
+            section{
+                grid-row:2;
+                grid-column:1/4;
+                display: grid;
+                grid-template-columns: 3fr 6fr 3fr;
+
+            }
+
+        </style>
+    </head>
+    <body>
+       <div class="container">
+        <header>
+            <h1>Amazon shoping</h1>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li>Electronic</li>
+                    <li>footbere</li>
+                    <li>fashion</li>
+                </ul>
+            </nav>
+                <main>
+                    <h2>shoping | online</h2>
+                    <p> Electronic on 50% of in on line</p>
+                </main>
+                <aside>
+                    50% OFF
+                </aside>
+        </section>
+        <footer>
+            <p>@ copy paste at the home</p>
+        </footer>
+       </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>age</title>
+        <style>
+            #age:in-range{
+                border: 2px solid green;
+                box-shadow: 2px 2px 3px green;
+            }
+            #age:out-of-range{
+                border: 2px solid blue;
+                box-shadow: 2px 2px 3px blue;
+            }
+            #age:out-of-range+span{
+                display: none;
+            }
+            #age:in-range+span{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <h2>Reigester User</h2>
+            <dt>Age</dt>
+            <dd>
+                <input type="number" value="15" min="15" max="25" id="age">
+                <span>Age 15 to 25</span>
+            </dd>
+        </form>
+    </body>
+</html>

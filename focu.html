@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hike</title>
+        <style>
+            #you+span{
+                  display: none;
+            }
+            #you:focus+span{
+                display: inline;
+            }
+            #you:focus{
+                border:5px solid blue;
+                box-shadow: 2px 2px 3px red;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Your Name</legend>
+            <dt>User name</dt>
+            <dd>
+                <input type="text" name="ram" id="you" placeholder="Your Name Capital">
+                <span>Your Name Capital.</span>
+            </dd>
+        </fieldset>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lala</title>
+        <style>
+            meter{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body class="container">
+      <fieldset>
+        <legend >password stength</legend>
+            <dl>
+                <dt>strong password</dt>
+                <dd>
+                    <meter min="1" max="20" value="10"></meter>
+                </dd>
+                <dd>
+                    <meter  min="10" max="50" low="10" high="20" value="30"></meter>
+                </dd>
+            </dl>
+      </fieldset>
+      <fieldset>
+        <legend>downloading</legend>
+        <dl>
+            <dt>prepering for downloading</dt>
+            <dd>
+                <progress></progress>
+            </dd>
+            <dt>dowloading 70%</dt>
+            <dd>
+                <progress min="1" max="100" value="70" ></progress>
+            </dd>
+            <dt> downloading 90%</dt>
+            <dd>
+                <progress min="1" max="100" value="90"></progress>
+            </dd>
+        </dl>
+        
+      </fieldset>
+    </body>
+</html>

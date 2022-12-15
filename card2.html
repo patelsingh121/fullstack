@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>card12</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+        <style>
+
+            #card{
+                width: 200px;
+                border: 5px solid yellow;
+                margin: 20px;
+                text-align: center;
+                justify-content: center;
+                background-color: white;
+            
+            }
+            .pr{
+                width: 150px;
+            border-radius: 50px;
+            background-image: linear-gradient(to left,rgb(233, 21, 205),rgb(116, 207, 203));
+            color: white;
+
+            }
+            #container{
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                height: 700px; 
+    
+                background-image: radial-gradient(rgb(233, 21, 205),rgb(116, 207, 203));
+            }
+            body{
+                  
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <form>
+            <div id="card">
+                  <h3>Login</h3>
+                    <dt>User Name</dt>
+                    <div>
+                        <span class="bi bi-person"></span> <input id="nm" name="text" placeholder="User name" ></dd> 
+                    </div>
+                <dt>Password </dt>
+                <div>
+               <span class="bi bi-lock"></span><input type="text" id="nm" name="text" placeholder="Password" >
+              </div>
+                <div>
+                    <span><a href="#" class="ma">Forget password</a></span></div><br><br>
+                   <div> <button class="pr">LOGIN</button></div><br>
+                    <p class="re">or sign Up using</p>
+                 <div id="card-footer">
+                    <span style="color:blue;" class="bi bi-facebook"></span>&nbsp&nbsp&nbsp<span style="background-color:circle;" class="bi bi-twitter">&nbsp&nbsp&nbsp</span>&nbsp&nbsp&nbsp<span class="bi bi-google"></span>
+                 <p class="re">or sign Up using</p>
+                  <p class="re">SIGN UP</p>
+                 </div>
+            
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>required</title>
+        <style>
+            #mobile:valid{
+                border:2px solid green;
+                box-shadow: 2px 2px 3px green;
+            }
+            #mobile:invalid{
+                border:2px solid red;
+                box-shadow: 2px 2px 3px red;
+            }
+            #mobile:in-range+span{
+                border:orange;
+                box-shadow:2px 2px 3px orange;
+            }
+             #mobile:valid+span{
+                display: none;
+
+             }
+             #mobile:invalid+span{
+                display: block;
+                color: violet;
+             }
+        </style>
+    </head>
+    <body>
+         <form>
+            <h2>Reigester User</h2>
+            <dt>Mobile </dt>
+            <dd>
+                <input type="text" name="phone" id="mobile" pattern="\+91\d{10}">
+                <span>Invalid mobile </span>
+            </dd>
+         </form>
+    </body>
+</html>
