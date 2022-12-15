@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>stock</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            function stockchange(){
+                var optstock= document.getElementById("optstock");
+                var lblstock= document.getElementById("lblstock");
+                if(optstock.checked==true){
+                    lblstock.innerHTML="avalabel";
+
+                }else{
+                    lblstock.innerHTML="out of stock";
+                }
+
+
+            }
+            function termschange(){
+               var optterms=document.getElementById("optterms");
+               var btnsubmit=document.getElementById("btnsubmit");
+               if(optterms.checked==true){
+                btnsubmit.style.display="block";
+               }else{
+                     btnsubmit.style.display="none";
+               }
+
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h2>datels of product</h2>
+        <dl>
+           <dt>tv</dt>
+           <dd>sumsung</dd>
+           <dt>price</dt>
+           <dd>44444</dd>
+           <dt>stock</dt>
+           <dd  class="form-switch"><input type="checkbox" checked  id="optstock" class="form-check-input" onchange="stockchange()" > <span id="lblstock">avalabel</span></dd>
+           <dt>Terms of services</dt>
+           <dd>
+            <textarea>
+                terms of services.........
+            </textarea>
+           </dd>
+           <dd>
+            <input id="optterms" onchange="termschange()" type="checkbox"><span>I accepted</span>
+           </dd>
+        </dl>
+        <button id="btnsubmit" style="display:none" class="btn btn-primary">submit</button>
+    </body>
+    
+</html>

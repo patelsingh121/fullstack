@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login form</title>
+           <script>
+            function Loginclick(){
+                var username = document.getElementById("UserName").value;
+                var password = document.getElementById("Password").value;
+                fetch("../data/users.json")
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(users){
+                    for(var user of users)
+                    {
+                        if(user.UserName == username && user.Password == password){
+                            document.write("Login Success..");
+                        }else{
+                                document.getElementById("msg").innerHTML="Invalid username/password".fontcolor('red');
+                                
+                        }
+                    
+                    }
+                })
+            }
+           </script>
+    <style>
+        #gh{ 
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         height:400px; 
+        }
+    </style>
+    </head>
+    <body>
+        <div id="gh">
+        <h2>User Login</h2>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" id="UserName" placeholder="YOUR NAME"></dd>
+            <dt>password</dt>
+            <dd><input type="Password" id="Password" placeholder="PASSWORD"></dd>
+        </dl>
+    <button onclick="Loginclick()">Login</button>
+        <h2 id="msg"></h2>
+        <a href="javascript:Loginclick()">Login</a>
+    </div>
+    </body>
+</html>

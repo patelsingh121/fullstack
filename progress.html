@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>progress</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet"  href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            function bodyload(){
+                document.getElementById("status").style.marginLeft ="150px";
+            }
+            function calculator(){
+              var msg=  document.getElementById("dd");
+              var male=  document.getElementById("optmale");
+              var female=  document.getElementById("optfemale");
+              if(male.checked){
+                msg.innerHTML = "your gender : " + male. value;
+              }
+              if(female.checked){
+                  msg.innerHTML = "your gender : " + female. value;
+              }
+
+            }
+        </script>
+    </head>
+    <body onload="bodyload()" class="container-fluid" >
+        <div class="mt-2">
+            <fieldset>
+                <legend>Gender</legend>
+                <input type="radio" class="form-check-input" name="gender" id="optmale" value="male">male
+                <input type="radio" class="form-check-input"  name="gender"  id="optfemale" value="female">female
+            </fieldset>
+        </div>
+        <div class="progress mt-3">
+          <div  id="underweight" class="progress-bar bg-dark text-white" style="width: 350px;">
+                 beloe 53kg  under-weight
+          </div>
+          <div id="normal" class="progress-bar bg-info text-white" style="width: 350px;">
+             53 to 72 kg     normals
+          </div>
+         <div id="overweight" class="progress-bar bg-dark text-white" style="width: 350px;">
+        53 to 72 kg     normals
+        </div>
+        </div>
+        <div id="status">
+            <span class="bi bi-caret-down-fill"></span>
+            <br>
+            You
+        </div>
+        <div class="mt-2">
+            <button onclick="calculator()" class="btn btn-primary">BMI calculator</button>
+        </div>
+        <h1 id="dd"></h1>
+
+
+    </body>
+</html>

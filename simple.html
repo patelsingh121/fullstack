@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>string</title>
+   </head>
+   <script>
+      function VerifyClick(){
+         var username = document.getElementById("txtName").value ;
+         var msg = document.getElementById("msg");
+         if(username.length>=4 && username.length<=10)
+         {
+            msg.innerHTML ="User Name Verified". bold().fontcolor('green').italics();
+
+         } else {
+            msg.innerHTML ="Invalid-User Name 4 to 10 char only".italics().fontcolor('red');
+         }
+      }
+      function ChangeCase(){
+         var username= document.getElementById("txtName").value;
+         document.getElementById("txtName").value= username.toUpperCase();
+      }
+   </script>
+   <body>
+      <h2>register user name</h2>
+      <dl>
+         <dt>uer name</dt>
+         <dd>
+            <input type="text" id="txtName" placeholder="BLOCK letter" onkeyup="VerifyClick()" onblur="ChangeCase()">
+         </dd>
+         <dd id="msg"></dd>
+        
+      </dl>
+      <button onclick="VerifyClick()">submit</button>
+   </body>
+</html>

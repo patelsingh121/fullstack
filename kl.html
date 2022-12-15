@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kr</title>
+        <script>
+            function verifypassword(){
+                var password=document.getElementById("password").value;
+                var regExp=/(?=.*[A-Z])\w{4,15}/;
+                var msg=document.getElementById("msg");
+                if(password.match(regExp)){
+                    msg.innerHTML="";
+                }else{
+                    msg.innerHTML="password 4 to 15 chr with at least 1 upper cause" .fontcolor('red');
+                }
+            }
+            function mass(){
+                var username=document.getElementById("trt").value;
+                var usermsg= document.getElementById("dd");
+                if(username.length>10){
+                    usermsg.innerHTML="name max 10 char only" .fontcolor('blue');
+                }else{
+                    username.innerHTML="";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <dl>
+            <dt>user name</dt>
+            <dd><input type="text" id="trt" onkeyup="mass()"></dd>
+            <dd id="dd"></dd>
+            <dt>password</dt>
+            <dd><input type="password" onkeyup="verifypassword()" id="password"></dd>
+            <dd id="msg"></dd>
+        </dl>
+    </body>
+</html>

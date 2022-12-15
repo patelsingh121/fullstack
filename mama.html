@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>card design</title>
+      <script>
+             var userdetails={
+               "cardnumber": "44445555666677778901",
+               "Cvv" : "5050",
+               "expiry" : "2023"
+             }
+             function verifycard(){
+               var card =document.getElementById("txtcard").value;
+               if(userdetails.cardnumber==card){
+                  document.getElementById("txtcvv").disabled=false;
+                  document.getElementById("txtcvv").focus();
+                  document.getElementById("txtcard").readOnly=true;
+               }
+             }
+             function verifycvv(){
+                var cvv=document.getElementById("txtcvv").value;
+                if(userdetails.Cvv==cvv){
+                  document.getElementById("istexp").disabled=false;
+                  document.getElementById("istexp").focus();
+                  document.getElementById("txtcvv").readOnly=true;
+                }
+             }
+      </script>
+
+   </head>
+   <body>
+          <fieldset>
+             <legend>Payment deatiels</legend>
+             <dl>
+               <dt>Card Name</dt>
+               <dd><input type="text" onkeyup="verifycard()" id="txtcard" size="30"></dd>
+               <dt>Cvv</dt>
+               <dd><input type="text" onkeyup="verifycvv()" id="txtcvv" disabled size="4"></dd>
+               <dt>Expiry</dt>
+               <dd>
+                  <select disabled id="istexp">
+                  <option>2022</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                  <option>2025</option>
+               </select>
+               </dd>
+             </dl>
+             <button id="btn pay">pay</button>
+          </fieldset>
+   </body>
+</html>

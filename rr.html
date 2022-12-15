@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.json">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+           .form-login {
+                justify-content: center;
+                height: 400px;
+                text-align: center;
+           }
+           #ss{
+            background-color: black;
+            color: white;
+           }
+           #ee{
+               background-color: rgb(140, 240, 140);
+           }
+        </style>
+        <script> 
+        function verifyclick(){
+                  var item = document.getElementById("ss").value;
+        }
+
+        </script>
+    </head>
+    <body class="container-fluid">
+        <div class="form-login">
+        <h3>TODO LIST</h3>
+        <input type="text" name="you" class="name" placeholder="NAME">&nbsp;<button id="ss"><span>Add Tab</span></button>
+        <h4>My Tranfer</h4>
+        <button class="w-50" id="ee" onclick="verifyclick()">End Test</button>
+        </div>
+    
+    </body>
+</html>

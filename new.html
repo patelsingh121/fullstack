@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+            .form-login{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 400px;
+            }
+        </style>
+        <script>
+            var userdetails={
+                "email" : "david@gmail.com",
+                "mobile": "+918858163519",
+                "password" : "david@11"
+            }
+            function continiousClick(){
+                var userid= document.getElementById("userid").value; 
+                var flag=" ";
+                if(userdetails.email==userid){
+                    flag=`login success with your email ${userid}.verification mail send.`;
+
+                }else if(userdetails.mobile==userid){
+                    flag=`login sucess with your mobile ${userid}.otp send your mobile.`;
+                }else{
+                        document.getElementById("msguser").innerHTML="invalid email or mobile";
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <div class="form-login">
+            <div style="border:2px solid red; padding:20px">
+                <h2>SIGN IN</h2>
+                <div id="usercontainer">
+                    <label class="form-label">Your email or mobile</label>
+                    <div>
+                        <input type="text" id="userid" class="form-control">
+                    </div>
+                    <div class="mt-4">
+                    <button onclick="continiousClick()" class="btn btn-warning w-100">contnious</button>
+                </div>
+            </div>
+            <div id="passwordcontainer" style="display: none;">
+                <label class="form-label">Your Password</label>
+                <div>
+                    <input type="password" id="password" class="form-control">
+                    <div id="msguser" class="text-danger"></div>
+                </div>
+                <div class="mt-4">
+                    <button class="btn btn-warning w-100">Login</button>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

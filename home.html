@@ -1,5 +1,30 @@
-<div>
-    <h1> Home shopping</h1>
-    <p>shopping offfer in : 75% of in market</p>
-    <iframe src="//www.slideshare.net/slideshow/embed_code/key/NEgtzjJU1vja7q" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/100000039438933/html-y-html-5" title="Html y html 5" target="_blank">Html y html 5</a> </strong> from <strong><a href="//www.slideshare.net/100000039438933" target="_blank">Alex Fino</a></strong> </div>
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript - inline</title>
+        <script>
+            function bodyload(){
+             pic.src="../public/R image.jpg";
+             frmRegister.btnRegister.value="Register";
+             frmLogin.btnLogin.value="Login";
+
+            }
+        </script>
+        
+    </head>
+    <body onload="bodyload()">
+       <img name="pic" width="100px" height="100px" border="1">
+       <div>
+        <form name="frmRegister">
+            <h2>register</h2>
+            User name:<input type="text" ><input type="button" name="btnRegister">
+        </form>
+       </div>
+         <div>
+            <form name="frmLogin">
+                <h2>Login</h2>
+                Email:<input  type="email"><input name="btnLogin" type="button">
+            </form>
+         </div>
+    </body>
+</html>

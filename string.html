@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>string Demo</title>
+    <script>
+        
+        function ChangeColor(){
+            alert(document.querySelector("select").value);
+            document.querySelector("p").innerHTML="Welcome to dada".fontcolor(document.querySelector("select").value);
+        }
+    </script>
+</head>
+    <body>
+        <fieldset>
+            <legend>Chosse feefct</legend>
+            <dl>
+                <dt>font color</dt>
+                <dd>
+                    <select onchange ="ChangeColor()">
+                        <option>red</option>
+                        <option>orange</option>
+                        <option>red</option>
+                        <option>blue</option>
+                        <option>green</option>
+                    </select>
+                </dd>
+            </dl>
+        </fieldset>
+        <p ></p>
+    </body>
+</html>

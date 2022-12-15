@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>string Demo</title>
+    <script>
+        
+        function ChangeColor(){
+            var msg = document.getElementById("msg");
+            var color =document.getElementById("istcolors").value;
+            msg.innerHTML = "<h1>HELLO !  MOHIT SINGH PATEL JI <br> HOW ARE YOU ?</h1>".fontcolor(color);
+        }
+        function ChangeCase(){
+            var name= document.getElementById("txtname").value;
+            document.getElementById("txtname").value = name.toUpperCase();
+        }
+        function verifyname(){
+            var name= document.getElementById("txtname").value;
+            var userError= document.getElementById("userError");
+            if(name==""){
+                userError.innerHTML= "User not required".fontcolor('red');
+            } else{
+                userError.innerHTML="";
+            }
+        }
+    </script>
+</head>
+    <body>
+           <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" onblur="verifyname()" onkeyup="ChangeCase()" placeholder="BLOCK LATTER" id="txtname"></dd>
+            <dd id="userError"></dd>
+                <dt>font color</dt>
+                <dd>
+                    <select id="istcolors" onchange ="ChangeColor()">
+                        <option>red</option>
+                        <option>orange</option>
+                        <option>red</option>
+                        <option>blue</option>
+                        <option>green</option>
+                    </select>
+                </dd>
+                <dt>Sampe text</dt>
+                <dd id="msg"></dd>
+            </dl>
+    </body>
+</html>
